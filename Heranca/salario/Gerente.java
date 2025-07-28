@@ -10,7 +10,7 @@ public class Gerente extends Empregado {
     public double calcularBonus(Departamento departamento) {
         if (departamento.alcancouMeta()) {
             // Gerentes recebem um bonus maior, por exemplo 20%
-            return getSalarioFixo() * 0.20;
+            return (getSalarioFixo() * 0.20) + ((departamento.getValorAtingidoMeta() - departamento.getValorMeta()) * 0.01);
         } else {
             // Sem bonus se nao atingir a meta
             return 0.0;
