@@ -1,7 +1,7 @@
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
+    import java.lang.reflect.Field;
+    import java.lang.reflect.Modifier;
 
-public class Program {
+    public class Program {
         public static void main(String[] args) {
             Quadrado quadrado = new Quadrado();
 
@@ -28,4 +28,4 @@ public class Program {
             System.out.printf("Area: %.2f\n", quadrado.area());
             System.out.printf(quadrado.toString() + "\n");
         }
-}
+    }

@@ -1,7 +1,4 @@
-public class FormaGeometrica {
-
-    // Metodo que deve ser sobrescrito pelas subclasses
-    public double area() {
-        throw new UnsupportedOperationException("Funcao area nao implementada");
-    }
+public abstract class FormaGeometrica {
+    // Metodo abstrato que deve ser implementado pelas subclasses
+    public abstract double area();
 }

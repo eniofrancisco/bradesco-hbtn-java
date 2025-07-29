@@ -1,8 +1,8 @@
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 public class Quadrado extends Retangulo {
-    protected double largura;
-    protected double altura;
+ //   protected double largura;
+ //   protected double altura;
     private double lado;
 
     public double getLado() {
