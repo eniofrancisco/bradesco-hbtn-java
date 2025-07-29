@@ -1,6 +1,6 @@
 public class Retangulo extends FormaGeometrica {
-    private double largura;
-    private double altura;
+protected double largura;
+protected double altura;
 
     public double getLargura() {
         return largura;
@@ -24,9 +24,15 @@ public class Retangulo extends FormaGeometrica {
         this.altura = altura;
     }
 
-    // Sobrescreve o metodo area da superclasse
+    // Sobrescreve o metodo area da superclasse FormaGeometrica
+//    @Override
+//    public double area() {
+//        return largura * altura;
+//    }
+
+    // Metodo toString personalizado
     @Override
-    public double area() {
-        return largura * altura;
+    public String toString() {
+        return String.format("[Retangulo] %.2f / %.2f", largura, altura);
     }
 }
