@@ -51,25 +51,27 @@ public class ContaBancariaBasica {
         if (saldo < 0) {
             return 0.0;
         }
-        double taxaMensal = taxaJurosAnual / 12.0 / 100.0;
-//		System.out.printf ("saldo="+saldo + "\n taxaJurosAnual="+taxaJurosAnual + "\n taxaMensal= "+taxaMensal + "\n saldo*taxaMensal= "+saldo * taxaMensal + "\n");
-		return saldo * taxaMensal;
+        double jurosMensal = (taxaJurosAnual / 12.0 / 100.0);
+        double saldoMaisJurosMensal = jurosMensal * saldo;
+//		System.out.printf ("  JurosMensal="+jurosMensal + "  saldoMaisJurosMensal="+saldoMaisJurosMensal + "  saldo="+saldo + "  taxaJurosAnual="+taxaJurosAnual + "\n");
+		return saldoMaisJurosMensal;
     }
 
     public void aplicarAtualizacaoMensal() {
-        saldo -= calcularTarifaMensal(); //67,5
-//		System.out.printf ("saldo calcularTarifaMensal= "+saldo + "\n");
-        saldo += calcularJurosMensal();
-//		System.out.printf ("saldo calcularJurosMensal= "+saldo + "\n");
-
-        if (saldo == 70.3125) {
+        var saldoMenosTarifaMensal = calcularTarifaMensal(); 
+        //saldo -= calcularTarifaMensal(); 
+        var saldoJurosMensal = calcularJurosMensal();
+		saldo = saldo - saldoMenosTarifaMensal;
+		saldo = saldo + saldoJurosMensal;
+/*        if (saldo == 70.3125) {
 			saldo = 70.63;
-//			System.out.printf ("saldo = 70.63" + "\n");
+			System.out.printf ("saldo = 70.63" + "\n");
 		}
         if (saldo == 1749.0) {
 			saldo = 1750.00;
-//			System.out.printf ("saldo = 1750.00" + "\n");
+			System.out.printf ("saldo = 1750.00" + "\n");
 		}
+*/
     }
 }
 
