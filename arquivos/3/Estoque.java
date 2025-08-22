@@ -45,7 +45,7 @@ public class Estoque {
         Produto novo = new Produto(novoId, nome, quantidade, preco);
         produtos.add(novo);
         salvarEstoque();
-        System.out.println("Produto adicionado com ID: " + novoId);
+        
     }
 
     private int gerarNovoId() {
@@ -62,7 +62,7 @@ public class Estoque {
         boolean removido = produtos.removeIf(p -> p.getId() == id);
         if (removido) {
             salvarEstoque();
-            System.out.println("Produto removido com sucesso.");
+            
         } else {
             System.out.println("Produto com ID " + id + " não encontrado.");
         }
@@ -79,7 +79,7 @@ public class Estoque {
         }
         if (encontrado) {
             salvarEstoque();
-            System.out.println("Quantidade atualizada com sucesso.");
+            
         } else {
             System.out.println("Produto com ID " + id + " não encontrado.");
         }
