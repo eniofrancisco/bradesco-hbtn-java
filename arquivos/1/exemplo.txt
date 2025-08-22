@@ -1,5 +1,5 @@
 
-Conteúdo do arquivo exemplo.txt
+Conteúdo do arquivo 'exemplo.txt'
 
 Este é um exemplo de arquivo de texto.
 Cada linha contém uma mensagem diferente.
