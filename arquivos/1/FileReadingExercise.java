@@ -7,7 +7,7 @@ public class FileReadingExercise {
         String fileName = "exemplo.txt"; // Nome do arquivo fixo para leitura
 
         // efetue a leitura do arquivo
-        System.out.println("Conteudo do arquivo 'exemplo.txt':\n");
+//        System.out.println("Conteudo do arquivo 'exemplo.txt':\n");
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
@@ -20,7 +20,7 @@ public class FileReadingExercise {
             System.out.println("Erro ao ler o arquivo: " + e.getMessage());
         }
 
-        System.out.println("\nLeitura do arquivo concluida.");
+//        System.out.println("\nLeitura do arquivo concluida.");
     }
 }
 
