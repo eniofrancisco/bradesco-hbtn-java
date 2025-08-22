@@ -1,4 +1,3 @@
-
 Conteúdo do arquivo 'exemplo.txt':
 
 Este é um exemplo de arquivo de texto.
@@ -7,4 +6,3 @@ Você está aprendendo a manipular arquivos com Java!
 Parabéns por avançar nos seus estudos!
 
 Leitura do arquivo concluída.
-
