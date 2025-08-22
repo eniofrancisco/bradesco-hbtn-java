@@ -1,9 +1,7 @@
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
+import java.io.FileReader;
 import java.io.IOException;
-
 public class FileReadingExercise {
     public static void main(String[] args) {
         String fileName = "exemplo.txt"; // Nome do arquivo fixo para leitura
@@ -12,10 +10,7 @@ public class FileReadingExercise {
         System.out.println("Conteudo do arquivo exemplo.txt:\n");
 
         try {
-            BufferedReader reader = new BufferedReader(
-                new InputStreamReader(new FileInputStream(fileName), "UTF-8")
-            );
-
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
             String linha;
             while ((linha = reader.readLine()) != null) {
                 System.out.println(linha);
