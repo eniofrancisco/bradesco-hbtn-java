@@ -1,0 +1,66 @@
+import java.util.HashMap;
+import java.util.Map;
+public class GerenciamentoDeContatos {
+    private Map<String, Contato> contatos;
+
+    // Construtor
+    public GerenciamentoDeContatos() {
+        contatos = new HashMap<>();
+    }
+
+    // Adiciona um novo contato
+    public void adicionarContato(String nome, String telefone, String email) {
+        if (contatos.containsKey(nome)) {
+            System.out.println("Erro: Contato com nome " + nome + " já existe!");
+            return;
+        }
+
+        // Verifica se o email já foi usado por outro contato
+        for (Contato c : contatos.values()) {
+            if (c.getEmails().contains(email)) {
+                System.out.println("Erro: Email " + email + " já está em uso!");
+                return;
+            }
+        }
+
+        Contato novoContato = new Contato();
+        novoContato.adicionarTelefone(telefone);
+        novoContato.adicionarEmail(email);
+        contatos.put(nome, novoContato);
+        System.out.println("Contato " + nome + " adicionado com sucesso!");
+    }
+
+    // Exibe todos os contatos
+    public void exibirContatos() {
+        for (Map.Entry<String, Contato> entry : contatos.entrySet()) {
+            String nome = entry.getKey();
+            Contato contato = entry.getValue();
+            System.out.println("Nome: " + nome);
+            System.out.println("Telefones: " + contato.getTelefones());
+            System.out.println("Emails: " + contato.getEmails());
+            System.out.println("-------------------------------");
+        }
+    }
+
+    // Busca um contato pelo nome
+    public void buscarContato(String nome) {
+        Contato contato = contatos.get(nome);
+        if (contato != null) {
+            System.out.println("Contato encontrado: " + nome);
+            System.out.println("Telefones: " + contato.getTelefones());
+            System.out.println("Emails: " + contato.getEmails());
+        } else {
+            System.out.println("Contato " + nome + " não encontrado.");
+        }
+    }
+
+    // Remove um contato pelo nome
+    public void removerContato(String nome) {
+        if (contatos.containsKey(nome)) {
+            contatos.remove(nome);
+            System.out.println("Contato " + nome + " removido com sucesso!");
+        } else {
+            System.out.println("Contato " + nome + " não encontrado.");
+        }
+    }
+}
