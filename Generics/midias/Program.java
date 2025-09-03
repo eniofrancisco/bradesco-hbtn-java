@@ -17,7 +17,7 @@ public class Program {
         bibliotecaLivros.adicionarMidia(livro2);
         bibliotecaLivros.adicionarMidia(livro3);
 
-        System.out.println("Biblioteca de Livros:");
+        // System.out.println("Biblioteca de Livros:");
         System.out.println("[" + formatarMidias(bibliotecaLivros.obterListaMidias()) + "]");
 
         Biblioteca<Midia> bibliotecaMidias = new Biblioteca<>();
@@ -26,7 +26,7 @@ public class Program {
         bibliotecaMidias.adicionarMidia(video2);
         bibliotecaMidias.adicionarMidia(jornal2);
 
-        System.out.println("\nBiblioteca de Mídias:");
+        // System.out.println("\nBiblioteca de Mídias:");
         System.out.println("[" + formatarMidias(bibliotecaMidias.obterListaMidias()) + "]");
     }
 
