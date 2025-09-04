@@ -13,7 +13,7 @@ public class ManipularArrayNumeros {
 
     public static void adicionarNumero(List<Integer> lista, int numero) {
         if (buscarPosicaoNumero(lista, numero) != -1) {
-            throw new IllegalArgumentException("Numero já contido na lista");
+            throw new IllegalArgumentException("Numero jah contido na lista");
         }
         lista.add(numero);
     }
