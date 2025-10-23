@@ -19,12 +19,20 @@ public class Pessoa implements Comparable<Pessoa> {
         return cargo;
     }
 
-    public int getCodigo() {
-        return codigo;
+    public String getNome() {
+        return nome;
     }
 
     public int getIdade() {
         return idade;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public double getSalario() {
+        return salario;
     }
 
     @Override
@@ -35,6 +43,8 @@ public class Pessoa implements Comparable<Pessoa> {
 
     @Override
     public int compareTo(Pessoa outra) {
-        return Integer.compare(this.codigo, outra.codigo);
+        int nomeComp = this.nome.compareTo(outra.nome);
+        if (nomeComp != 0) return nomeComp;
+        return Integer.compare(this.codigo, outra.codigo); // desempate por código
     }
 }
