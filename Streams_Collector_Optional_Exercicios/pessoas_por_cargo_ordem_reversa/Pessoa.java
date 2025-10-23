@@ -23,16 +23,8 @@ public class Pessoa implements Comparable<Pessoa> {
         return codigo;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
     public int getIdade() {
         return idade;
-    }
-
-    public double getSalario() {
-        return salario;
     }
 
     @Override
