@@ -3,10 +3,10 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Random;
 
-public class ProcessamentoDePagamentos {
+public class VerificacaoLogin {
 
     // Logger SLF4j
-    private static final Logger logger = LoggerFactory.getLogger(ProcessamentoDePagamentos.class);
+    private static final Logger logger = LoggerFactory.getLogger(VerificacaoLogin.class);
 
     public static void main(String[] args) {
 
